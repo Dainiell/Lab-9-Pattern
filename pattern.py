@@ -1,9 +1,22 @@
-num_rows =int(input('Enter The number of rows: '))
-current_number = 1 #start from 1
+#ENTER NUMBER
+row_count = int(input('Enter the number of rows: ')) 
 
 
-for row in range(1, num_rows + 1):
-    for col in range (1, row + 1):
-        print(col, end='')
-        current_number += 1
-    print()
+#PROCESSING HERE
+num = 1 
+triangle_row = ''
+if row_count > 0: 
+
+  for row in range(1, row_count + 1): 
+
+    for column in range(row): 
+
+      triangle_row += str(num) + ' ' 
+
+      num += 1 
+
+    print(triangle_row) 
+
+    triangle_row = '' 
+else: 
+   print("Invalid number of rows.") 
